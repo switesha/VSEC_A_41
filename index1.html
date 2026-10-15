@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Result Management System</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            width: 90%;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        h2 {
+            color: #444;
+        }
+
+        .form-box {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        input {
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px 18px;
+            margin: 8px 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: white;
+        }
+
+        #addBtn {
+            background-color: #007bff;
+        }
+
+        #updateBtn {
+            background-color: #28a745;
+            display: none;
+        }
+
+        #clearBtn {
+            background-color: #6c757d;
+        }
+
+        #clearAllBtn {
+            background-color: #dc3545;
+        }
+
+        .edit {
+            background-color: #ffc107;
+            color: black;
+        }
+
+        .delete {
+            background-color: #dc3545;
+        }
+
+        table {
+            width: 100%;
+            margin-top: 25px;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .topper {
+            margin-top: 25px;
+            padding: 20px;
+            text-align: center;
+            background-color: #fff3cd;
+            border: 2px solid #ffc107;
+            border-radius: 8px;
+        }
+
+        .topper h2 {
+            color: #856404;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Student Result Management System</h1>
+
+        <div class="form-box">
+
+            <h2>Student Details</h2>
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Student Name"
+            >
+
+            <input
+                type="text"
+                id="roll"
+                placeholder="Roll Number"
+            >
+
+            <input
+                type="number"
+                id="percentage"
+                placeholder="Percentage"
+                min="0"
+                max="100"
+            >
+
+            <br>
+
+            <button id="addBtn" onclick="addStudent()">
+                Add Student
+            </button>
+
+            <button id="updateBtn" onclick="updateStudent()">
+                Update Student
+            </button>
+
+            <button id="clearBtn" onclick="clearForm()">
+                Clear
+            </button>
+
+            <button id="clearAllBtn" onclick="clearAllStudents()">
+                Clear All
+            </button>
+
+        </div>
+
+
+        <h2>Student Results</h2>
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th>Student Name</th>
+                    <th>Roll Number</th>
+                    <th>Percentage</th>
+                    <th>Result</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+
+            <tbody id="studentTable">
+            </tbody>
+
+        </table>
+
+
+        <div class="topper" id="topper">
+
+            <h2>🏆 Topper Student</h2>
+
+            <p>No student added yet.</p>
+
+        </div>
+
+    </div>
+
+
+    <!-- JavaScript File -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>

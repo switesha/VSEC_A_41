@@ -1,195 +1,92 @@
-/* Reset */
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+
+* {
+    box-sizing: border-box;
 }
 
-/* Body */
-body{
-    font-family:Arial, sans-serif;
-    background:#f4f4f4;
-    color:#333;
-    line-height:1.6;
+body {
+    font-family: Arial, sans-serif;
+    background: #eef2f7;
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/* Header */
-header{
-    background:#003366;
-    color:white;
-    display:flex;
-    align-items:center;
-    padding:15px 40px;
+.container {
+    background: white;
+    width: 100%;
+    max-width: 450px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
 }
 
-.logo img{
-    width:80px;
-    height:80px;
-    margin-right:20px;
+h2 {
+    text-align: center;
+    color: #2457a7;
+    margin-top: 0;
+    margin-bottom: 25px;
 }
 
-.header-text h1{
-    font-size:36px;
+label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #333;
 }
 
-.header-text h2{
-    font-size:20px;
-    margin:5px 0;
+input, select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    background: white;
 }
 
-.header-text p{
-    font-size:16px;
+input:focus, select:focus {
+    outline: 2px solid #2457a7;
+    border-color: #2457a7;
 }
 
-/* Navigation */
-nav{
-    background:#00509e;
-    text-align:center;
-    padding:15px;
+small {
+    display: block;
+    color: #d62828;
+    font-size: 12px;
+    margin-top: 5px;
 }
 
-nav a{
-    color:white;
-    text-decoration:none;
-    margin:0 20px;
-    font-size:18px;
-    font-weight:bold;
+button {
+    width: 100%;
+    margin-top: 22px;
+    padding: 13px;
+    border: none;
+    border-radius: 6px;
+    background: #2457a7;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
 }
 
-nav a:hover{
-    color:yellow;
+button:hover {
+    background: #173f80;
 }
 
-/* Hero Section */
-.hero{
-    text-align:center;
-    padding:30px;
+#successMessage {
+    text-align: center;
+    color: #168348;
+    font-weight: bold;
 }
 
-.hero img{
-    width:80%;
-    max-width:900px;
-    border-radius:10px;
-    margin-bottom:20px;
-}
+@media (max-width: 480px) {
+    body {
+        padding: 12px;
+    }
 
-.hero h2{
-    color:#003366;
-    margin-bottom:10px;
-}
-
-.hero p{
-    font-size:18px;
-}
-
-/* Section */
-section{
-    width:85%;
-    margin:30px auto;
-    background:white;
-    padding:25px;
-    border-radius:10px;
-    box-shadow:0 2px 8px rgba(0,0,0,0.2);
-}
-
-section h2{
-    color:#003366;
-    margin-bottom:15px;
-    border-bottom:2px solid #003366;
-    padding-bottom:8px;
-}
-
-/* Highlight Boxes */
-.highlights{
-    text-align:center;
-}
-
-.box{
-    display:inline-block;
-    width:280px;
-    margin:15px;
-    padding:20px;
-    background:#eaf4ff;
-    border-radius:10px;
-    box-shadow:0 2px 6px rgba(0,0,0,0.2);
-}
-
-.box h3{
-    color:#003366;
-    margin-bottom:10px;
-}
-
-/* Table */
-table{
-    width:100%;
-    border-collapse:collapse;
-    margin-top:20px;
-}
-
-table th{
-    background:#003366;
-    color:white;
-    padding:12px;
-}
-
-table td{
-    padding:12px;
-    text-align:center;
-}
-
-table tr:nth-child(even){
-    background:#f2f2f2;
-}
-
-table tr:hover{
-    background:#d9ecff;
-}
-
-/* Lists */
-ul{
-    margin-left:25px;
-}
-
-li{
-    margin:10px 0;
-}
-
-/* Contact Form */
-form{
-    margin-top:20px;
-}
-
-input,
-textarea{
-    width:100%;
-    padding:10px;
-    border:1px solid #ccc;
-    border-radius:5px;
-    font-size:16px;
-}
-
-input[type="submit"]{
-    width:160px;
-    background:#003366;
-    color:white;
-    border:none;
-    cursor:pointer;
-    font-size:16px;
-}
-
-input[type="submit"]:hover{
-    background:#00509e;
-}
-
-/* Footer */
-footer{
-    background:#003366;
-    color:white;
-    text-align:center;
-    padding:20px;
-    margin-top:30px;
-}
-
-footer p{
-    margin:5px 0;
+    .container {
+        padding: 20px;
+    }
 }
